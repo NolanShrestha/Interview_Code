@@ -15,26 +15,26 @@ if ($con) {
     $sql = "SELECT user_id FROM Users WHERE username='$name'";
     $result = mysqli_query($con, $sql);
     if ($result) {
-        $result = mysqli_fetch_assoc($result);
-        if ($result) {
-            $sender_id = $result['user_id'];
+        $row = mysqli_fetch_assoc($result);
+        if ($row) {
+            $sender_id = $row['user_id'];
         }
     }
     $sql = "SELECT * FROM Users WHERE user_id='$sender_id'";
     $result = mysqli_query($con, $sql);
     if ($result) {
-        $result = mysqli_fetch_assoc($result);
-        if (!$result) {
+        $row = mysqli_fetch_assoc($result);
+        if (!$row) {
             echo "Sender doesn't exist!";
-        } else if ($result['balance'] < $amount) {
+        } else if ($row['balance'] < $amount) {
             echo "Insufficient balance!";
         } else {
 
             $sql = "SELECT * FROM Users WHERE user_id='$receiver_id'";
             $result = mysqli_query($con, $sql);
             if ($result) {
-                $result = mysqli_fetch_assoc($result);
-                if (!$result) {
+                $row = mysqli_fetch_assoc($result);
+                if (!$row) {
                     echo "Receiver doesn't exist!";
                 } else {
                     mysqli_commit($con);
