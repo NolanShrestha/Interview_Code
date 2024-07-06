@@ -24,7 +24,7 @@ This simple API made through PHP and MySQL registers a user, logs them in, updat
 
 ## Updating information
 - Logged in users can update their information by altering data present in (update.php) file.
-- Redundancy during update will not be recorded. 
+- Redundancy during update operation will not be recorded. 
 
 ## Payment
 - Users can send money to specified users.
