@@ -35,5 +35,5 @@ This simple API made through PHP and MySQL registers a user, logs them in, updat
 - Logged in users can logout ensuring that the session gets unset and the existing session gets destroyed.
 
 ### Getting Started:
-To use this API all you need is a server to run PHP and MySql. You can then proceed to clone the project and use it accordingly to your purpose. 
+To use this API all you need is a server to run PHP and MySql, make sure you have proper connection with MySql server which is integrated in each file. You can then proceed to clone the project and use it accordingly to your purpose.
 
