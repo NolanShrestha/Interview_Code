@@ -37,7 +37,7 @@ if ($con) {
                 if (!$row) {
                     echo "Receiver doesn't exist!";
                 } else {
-                    mysqli_commit($con);
+                    mysqli_begin_transaction($con);
                     $sql = "UPDATE Users SET balance=balance-'$amount' WHERE user_id='$sender_id'";
                     $result = mysqli_query($con, $sql);
 
